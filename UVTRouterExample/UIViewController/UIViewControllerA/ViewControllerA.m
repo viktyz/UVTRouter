@@ -14,6 +14,16 @@
 
 @implementation ViewControllerA
 
+- (instancetype)initWithA:(NSString *)a B:(NSString *)b C:(NSString *)c
+{
+    self = [self init];
+    if (self) {
+        //
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

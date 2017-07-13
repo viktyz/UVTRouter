@@ -20,6 +20,8 @@
 		068D6FB81F172339005055D6 /* ViewControllerA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D6FB61F172339005055D6 /* ViewControllerA.xib */; };
 		068D6FBD1F17234F005055D6 /* ViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6FBB1F17234F005055D6 /* ViewControllerB.m */; };
 		068D6FBE1F17234F005055D6 /* ViewControllerB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068D6FBC1F17234F005055D6 /* ViewControllerB.xib */; };
+		068D6FC11F174CE6005055D6 /* UVTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6FC01F174CE6005055D6 /* UVTRouter.m */; };
+		068D6FC41F178F60005055D6 /* UVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6FC31F178F60005055D6 /* UVTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,11 @@
 		068D6FBA1F17234F005055D6 /* ViewControllerB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerB.h; path = UIViewController/UIViewControllerB/ViewControllerB.h; sourceTree = "<group>"; };
 		068D6FBB1F17234F005055D6 /* ViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerB.m; path = UIViewController/UIViewControllerB/ViewControllerB.m; sourceTree = "<group>"; };
 		068D6FBC1F17234F005055D6 /* ViewControllerB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewControllerB.xib; path = UIViewController/UIViewControllerB/ViewControllerB.xib; sourceTree = "<group>"; };
+		068D6FBF1F174CE6005055D6 /* UVTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVTRouter.h; sourceTree = "<group>"; };
+		068D6FC01F174CE6005055D6 /* UVTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVTRouter.m; sourceTree = "<group>"; };
+		068D6FC21F178F60005055D6 /* UVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVTViewController.h; sourceTree = "<group>"; };
+		068D6FC31F178F60005055D6 /* UVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVTViewController.m; sourceTree = "<group>"; };
+		068D6FC51F17920E005055D6 /* UVTRouter.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVTRouter.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +155,11 @@
 		068D6FAC1F1722CD005055D6 /* UVTRouter */ = {
 			isa = PBXGroup;
 			children = (
+				068D6FC51F17920E005055D6 /* UVTRouter.pch */,
+				068D6FBF1F174CE6005055D6 /* UVTRouter.h */,
+				068D6FC01F174CE6005055D6 /* UVTRouter.m */,
+				068D6FC21F178F60005055D6 /* UVTViewController.h */,
+				068D6FC31F178F60005055D6 /* UVTViewController.m */,
 			);
 			path = UVTRouter;
 			sourceTree = "<group>";
@@ -321,7 +333,9 @@
 				068D6FB71F172339005055D6 /* ViewControllerA.m in Sources */,
 				068D6FAB1F172210005055D6 /* ViewController.m in Sources */,
 				068D6FAA1F172210005055D6 /* main.m in Sources */,
+				068D6FC41F178F60005055D6 /* UVTViewController.m in Sources */,
 				068D6FA51F172210005055D6 /* AppDelegate.m in Sources */,
+				068D6FC11F174CE6005055D6 /* UVTRouter.m in Sources */,
 				068D6FBD1F17234F005055D6 /* ViewControllerB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = UVTRouter/UVTRouter.pch;
 				INFOPLIST_FILE = UVTRouterExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.upvincent.UVTRouter;
@@ -484,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = UVTRouter/UVTRouter.pch;
 				INFOPLIST_FILE = UVTRouterExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.upvincent.UVTRouter;

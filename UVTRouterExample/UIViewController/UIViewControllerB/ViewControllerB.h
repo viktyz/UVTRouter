@@ -6,8 +6,10 @@
 //  Copyright © 2017年 UVT. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "UVTViewController.h"
 
-@interface ViewControllerB : UIViewController
+@interface ViewControllerB : UVTViewController
+
+- (instancetype)initWithDic:(NSDictionary *)dicInfo;
 
 @end

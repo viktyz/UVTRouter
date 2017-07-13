@@ -27,6 +27,8 @@
 
 - (IBAction)clickJumpA:(UIButton *)sender {
     
+    UVTViewController *aVC = [UVTRouter openURL:@"router://ViewControllerB/initWithDic?tk1=tv1&tk2=tv2"];
+    [self.view addSubview:aVC.view];
 }
 
 - (IBAction)clickJumpB:(UIButton *)sender {

@@ -1,0 +1,14 @@
+//
+//  UVTRouter.pch
+//  UVTRouter
+//
+//  Created by viktyz on 2017/7/13.
+//  Copyright © 2017年 UVT. All rights reserved.
+//
+
+#ifndef UVTRouter_pch
+#define UVTRouter_pch
+
+#import "UVTRouter.h"
+
+#endif /* UVTRouter_pch */

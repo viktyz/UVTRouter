@@ -1,35 +1,22 @@
 //
-//  ViewControllerB.m
+//  UVTViewController.m
 //  UVTRouter
 //
 //  Created by viktyz on 2017/7/13.
 //  Copyright © 2017年 UVT. All rights reserved.
 //
 
-#import "ViewControllerB.h"
+#import "UVTViewController.h"
 
-@interface ViewControllerB ()
+@interface UVTViewController ()
 
 @end
 
-@implementation ViewControllerB
-
-- (instancetype)initWithDic:(NSDictionary *)dicInfo
-{
-    self = [super init];
-    
-    if (self) {
-        for (NSString *key in dicInfo.allKeys) {
-            NSLog(@"initWithDic : %@ : %@",key,dicInfo[key]);
-        }
-    }
-    
-    return self;
-}
+@implementation UVTViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
