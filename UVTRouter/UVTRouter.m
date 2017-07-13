@@ -43,6 +43,13 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
 {
     NSURL *mURL = [NSURL URLWithString:URL];
     
+    NSString *scheme = mURL.scheme;
+    
+    if (!scheme || scheme.length == 0) {
+        NSLog(@"Please input valid scheme name");
+        return nil;
+    }
+    
     NSString *host = mURL.host;
     
     if (!host || host.length == 0) {
@@ -66,7 +73,32 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
         [parameters addEntriesFromDictionary:userInfo];
     }
     
-    return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(host) alloc],NSSelectorFromString(path),parameters);
+    if ([scheme isEqualToString:@"call"]) {
+        return [self callIn:host withMethod:path withParameters:parameters];
+    }
+    else if([scheme isEqualToString:@"jump"]) {
+        return [self jumpTo:host withMethod:path withParameters:parameters];
+    }
+    else if([scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"]) {
+        //Jump to Web
+        NSLog(@"Jump to Web : %@",URL);
+        return nil;
+    }
+    else{
+        NSLog(@"UVTRouter not match : %@",scheme);
+    }
+    
+    return nil;
+}
+
++ (id)callIn:(NSString *)class withMethod:(NSString *)method  withParameters:(NSDictionary *)parameters
+{
+    return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
+}
+
++ (id)jumpTo:(NSString *)class withMethod:(NSString *)method withParameters:(NSDictionary *)parameters
+{
+    return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
 }
 
 + (BOOL)canOpenURL:(NSString *)URL
