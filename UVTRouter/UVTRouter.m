@@ -14,6 +14,7 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
 @interface UVTRouter()
 
 @property (nonatomic, strong) NSMutableDictionary *routerMap;
+@property (nonatomic, strong) UIViewController *defaultVC;
 
 @end
 
@@ -80,7 +81,7 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
     }
     
     if (!instance) {
-        instance = [self openEmpty:@"UVTEmptyViewController" withMethod:@"initWithURL:" withFullURL:[URL stringByAppendingString:[[self sharedInstance] crateQuery:userInfo]]];
+        instance = [[self sharedInstance] defaultVC];
     }
     
     return instance;
@@ -91,14 +92,26 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
     return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
 }
 
-+ (id)openEmpty:(NSString *)class withMethod:(NSString *)method withFullURL:(NSString *)fullURL
-{
-    return ((id (*)(id, SEL, NSString *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),fullURL);
-}
-
 + (BOOL)canOpenURL:(NSString *)URL
 {
-    return ([[self openURL:URL] class] == NSClassFromString(@"UVTEmptyViewController")) ? NO : YES;
+    return ([self openURL:URL] == [[self sharedInstance] defaultVC]) ? NO : YES;
+}
+
++ (void)setDefaultVC:(UIViewController *)defaultVC
+{
+    [[self sharedInstance] setDefaultVC:defaultVC];
+}
+
+- (UIViewController *)defaultVC
+{
+    if (!_defaultVC) {
+        
+        _defaultVC = [[UIViewController alloc] init];
+        _defaultVC.title = @"UVTRouter Default VC";
+        _defaultVC.view.backgroundColor = [UIColor whiteColor];
+    }
+    
+    return _defaultVC;
 }
 
 #pragma mark - Utils

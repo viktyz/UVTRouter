@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // URL 格式: scheme://target/action(/type?key1=value1&key2=value2&...)
 
@@ -24,5 +25,7 @@ extern NSString *const UVTRouterParameterCompletion;
 + (id)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion;
 
 + (BOOL)canOpenURL:(NSString *)URL;
+
++ (void)setDefaultVC:(UIViewController *)defaultVC;
 
 @end
