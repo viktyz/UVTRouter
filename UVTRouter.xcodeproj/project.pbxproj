@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		060A87E41F1872EC00FBF72A /* ViewControllerB+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A87E31F1872EC00FBF72A /* ViewControllerB+Action.m */; };
+		060A87E81F1897C500FBF72A /* ViewControllerA+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A87E71F1897C500FBF72A /* ViewControllerA+Action.m */; };
 		068D6F811F17218D005055D6 /* UVTRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F801F17218D005055D6 /* UVTRouterTests.m */; };
 		068D6F8C1F17218D005055D6 /* UVTRouterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F8B1F17218D005055D6 /* UVTRouterUITests.m */; };
 		068D6FA51F172210005055D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F9B1F172210005055D6 /* AppDelegate.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		060A87E21F1872EC00FBF72A /* ViewControllerB+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewControllerB+Action.h"; path = "UIViewController/UIViewControllerB/Action/ViewControllerB+Action.h"; sourceTree = "<group>"; };
 		060A87E31F1872EC00FBF72A /* ViewControllerB+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewControllerB+Action.m"; path = "UIViewController/UIViewControllerB/Action/ViewControllerB+Action.m"; sourceTree = "<group>"; };
+		060A87E61F1897C500FBF72A /* ViewControllerA+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewControllerA+Action.h"; path = "Action/ViewControllerA+Action.h"; sourceTree = "<group>"; };
+		060A87E71F1897C500FBF72A /* ViewControllerA+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewControllerA+Action.m"; path = "Action/ViewControllerA+Action.m"; sourceTree = "<group>"; };
 		068D6F631F17218D005055D6 /* UVTRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVTRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068D6F7C1F17218D005055D6 /* UVTRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVTRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		068D6F801F17218D005055D6 /* UVTRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVTRouterTests.m; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 			children = (
 				060A87E21F1872EC00FBF72A /* ViewControllerB+Action.h */,
 				060A87E31F1872EC00FBF72A /* ViewControllerB+Action.m */,
+			);
+			name = Action;
+			sourceTree = "<group>";
+		};
+		060A87E51F1897A500FBF72A /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				060A87E61F1897C500FBF72A /* ViewControllerA+Action.h */,
+				060A87E71F1897C500FBF72A /* ViewControllerA+Action.m */,
 			);
 			name = Action;
 			sourceTree = "<group>";
@@ -183,6 +195,7 @@
 		068D6FB31F172339005055D6 /* UIViewControllerA */ = {
 			isa = PBXGroup;
 			children = (
+				060A87E51F1897A500FBF72A /* Action */,
 				068D6FB41F172339005055D6 /* ViewControllerA.h */,
 				068D6FB51F172339005055D6 /* ViewControllerA.m */,
 				068D6FB61F172339005055D6 /* ViewControllerA.xib */,
@@ -342,6 +355,7 @@
 				068D6FAB1F172210005055D6 /* ViewController.m in Sources */,
 				068D6FAA1F172210005055D6 /* main.m in Sources */,
 				068D6FA51F172210005055D6 /* AppDelegate.m in Sources */,
+				060A87E81F1897C500FBF72A /* ViewControllerA+Action.m in Sources */,
 				060A87E41F1872EC00FBF72A /* ViewControllerB+Action.m in Sources */,
 				068D6FC11F174CE6005055D6 /* UVTRouter.m in Sources */,
 				068D6FBD1F17234F005055D6 /* ViewControllerB.m in Sources */,

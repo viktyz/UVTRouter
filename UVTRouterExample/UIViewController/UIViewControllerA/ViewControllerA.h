@@ -10,6 +10,6 @@
 
 @interface ViewControllerA : UIViewController
 
-- (instancetype)initWithA:(NSString *)a B:(NSString *)b C:(NSString *)c;
+- (instancetype)initWithA:(NSString *)a B:(NSString *)b C:(void (^)(id result))completion;
 
 @end
