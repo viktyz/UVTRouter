@@ -73,24 +73,30 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
         [parameters addEntriesFromDictionary:userInfo];
     }
     
+    
+    id instance = nil;
+    
     if ([scheme isEqualToString:@"router"]) {
-        return [self callIn:host withMethod:path withParameters:parameters];
-    }
-    else if([scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"]) {
-        //Jump to Web
-        NSLog(@"Jump to Web : %@",URL);
-        return nil;
-    }
-    else{
-        NSLog(@"UVTRouter not match : %@",scheme);
+        
+        instance = [self callIn:host withMethod:path withParameters:parameters];
     }
     
-    return nil;
+    if (!instance) {
+        
+        instance = [self openEmpty:@"UVTEmptyViewController" withMethod:@"initWithURL:" withFullURL:[URL stringByAppendingString:[[self sharedInstance] crateQuery:parameters]]];
+    }
+    
+    return instance;
 }
 
-+ (id)callIn:(NSString *)class withMethod:(NSString *)method  withParameters:(NSDictionary *)parameters
++ (id)callIn:(NSString *)class withMethod:(NSString *)method withParameters:(NSDictionary *)parameters
 {
     return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
+}
+
++ (id)openEmpty:(NSString *)class withMethod:(NSString *)method withFullURL:(NSString *)fullURL
+{
+    return ((id (*)(id, SEL, NSString *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),fullURL);
 }
 
 + (BOOL)canOpenURL:(NSString *)URL
@@ -117,4 +123,37 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
     
     return [dict copy];
 }
+
+- (NSString *)crateQuery:(NSDictionary *)parameters
+{
+    NSString *query = @"";
+    NSArray *allkeys = parameters.allKeys;
+    
+    if ([allkeys count] == 0) {
+        return query;
+    }
+    
+    if ([allkeys count] == 1) {
+        NSString *fkey = allkeys.firstObject;
+        NSString *fvalue = parameters[fkey];
+        query = [NSString stringWithFormat:@"%@=%@",fkey,fvalue];
+        return query;
+    }
+    
+    if ([allkeys count] > 1) {
+        
+        NSString *fkey = allkeys.firstObject;
+        NSString *fvalue = parameters[fkey];
+        query = [NSString stringWithFormat:@"%@=%@",fkey,fvalue];
+        
+        for (NSInteger i = 1; i < [allkeys count]; i++) {
+            NSString *key = allkeys[i];
+            NSString *value = parameters[key];
+            query = [query stringByAppendingFormat:@"&%@=%@",key,value];
+        }
+    }
+    
+    return query;
+}
+
 @end

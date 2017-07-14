@@ -51,11 +51,20 @@
                                     <action selector="clickJumpB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8k-a6-ybS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCZ-s1-uJF">
+                                <rect key="frame" x="134" y="264" width="107" height="30"/>
+                                <state key="normal" title="Jump To Empty"/>
+                                <connections>
+                                    <action selector="clickJumpEmpyt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbw-zP-xux"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cCZ-s1-uJF" firstAttribute="top" secondItem="5mR-ZR-iem" secondAttribute="bottom" constant="20" id="P2q-KZ-nli"/>
                             <constraint firstItem="63a-fe-yoN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agI-Rz-3QO"/>
                             <constraint firstItem="5mR-ZR-iem" firstAttribute="top" secondItem="63a-fe-yoN" secondAttribute="bottom" constant="20" id="bvi-sK-lLk"/>
+                            <constraint firstItem="cCZ-s1-uJF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hdL-xx-3ZS"/>
                             <constraint firstItem="63a-fe-yoN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="sLN-Wl-oqH"/>
                             <constraint firstItem="5mR-ZR-iem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="smN-Lc-LBI"/>
                         </constraints>

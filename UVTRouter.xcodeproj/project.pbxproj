@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		060A87E41F1872EC00FBF72A /* ViewControllerB+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A87E31F1872EC00FBF72A /* ViewControllerB+Action.m */; };
 		060A87E81F1897C500FBF72A /* ViewControllerA+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A87E71F1897C500FBF72A /* ViewControllerA+Action.m */; };
+		060A87EB1F18A14900FBF72A /* UVTEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A87EA1F18A14900FBF72A /* UVTEmptyViewController.m */; };
 		068D6F811F17218D005055D6 /* UVTRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F801F17218D005055D6 /* UVTRouterTests.m */; };
 		068D6F8C1F17218D005055D6 /* UVTRouterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F8B1F17218D005055D6 /* UVTRouterUITests.m */; };
 		068D6FA51F172210005055D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D6F9B1F172210005055D6 /* AppDelegate.m */; };
@@ -47,6 +48,8 @@
 		060A87E31F1872EC00FBF72A /* ViewControllerB+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewControllerB+Action.m"; path = "UIViewController/UIViewControllerB/Action/ViewControllerB+Action.m"; sourceTree = "<group>"; };
 		060A87E61F1897C500FBF72A /* ViewControllerA+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewControllerA+Action.h"; path = "Action/ViewControllerA+Action.h"; sourceTree = "<group>"; };
 		060A87E71F1897C500FBF72A /* ViewControllerA+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ViewControllerA+Action.m"; path = "Action/ViewControllerA+Action.m"; sourceTree = "<group>"; };
+		060A87E91F18A14900FBF72A /* UVTEmptyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVTEmptyViewController.h; sourceTree = "<group>"; };
+		060A87EA1F18A14900FBF72A /* UVTEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVTEmptyViewController.m; sourceTree = "<group>"; };
 		068D6F631F17218D005055D6 /* UVTRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVTRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		068D6F7C1F17218D005055D6 /* UVTRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVTRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		068D6F801F17218D005055D6 /* UVTRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVTRouterTests.m; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				068D6FC51F17920E005055D6 /* UVTRouter.pch */,
 				068D6FBF1F174CE6005055D6 /* UVTRouter.h */,
 				068D6FC01F174CE6005055D6 /* UVTRouter.m */,
+				060A87E91F18A14900FBF72A /* UVTEmptyViewController.h */,
+				060A87EA1F18A14900FBF72A /* UVTEmptyViewController.m */,
 			);
 			path = UVTRouter;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				060A87E81F1897C500FBF72A /* ViewControllerA+Action.m in Sources */,
 				060A87E41F1872EC00FBF72A /* ViewControllerB+Action.m in Sources */,
 				068D6FC11F174CE6005055D6 /* UVTRouter.m in Sources */,
+				060A87EB1F18A14900FBF72A /* UVTEmptyViewController.m in Sources */,
 				068D6FBD1F17234F005055D6 /* ViewControllerB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

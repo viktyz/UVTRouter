@@ -40,4 +40,10 @@
     [self.navigationController pushViewController:aVC animated:YES];
 }
 
+- (IBAction)clickJumpEmpyt:(UIButton *)sender {
+    
+    UIViewController *aVC = [UVTRouter openURL:@"router://AnyEmptyURL/initWithDic?A=testA&B=testB"];
+    [self.navigationController pushViewController:aVC animated:YES];
+}
+
 @end
