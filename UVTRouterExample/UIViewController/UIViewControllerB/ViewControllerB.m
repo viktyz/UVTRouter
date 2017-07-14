@@ -14,16 +14,14 @@
 
 @implementation ViewControllerB
 
-- (instancetype)initWithDic:(NSDictionary *)dicInfo
+- (instancetype)initWithA:(NSString *)a B:(NSString *)b C:(NSString *)c
 {
     self = [super init];
-    
     if (self) {
-        for (NSString *key in dicInfo.allKeys) {
-            NSLog(@"initWithDic : %@ : %@",key,dicInfo[key]);
-        }
+        NSLog(@"A : %@",a);
+        NSLog(@"B : %@",b);
+        NSLog(@"C : %@",c);
     }
-    
     return self;
 }
 

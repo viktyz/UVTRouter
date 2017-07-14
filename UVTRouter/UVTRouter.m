@@ -73,11 +73,8 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
         [parameters addEntriesFromDictionary:userInfo];
     }
     
-    if ([scheme isEqualToString:@"call"]) {
+    if ([scheme isEqualToString:@"router"]) {
         return [self callIn:host withMethod:path withParameters:parameters];
-    }
-    else if([scheme isEqualToString:@"jump"]) {
-        return [self jumpTo:host withMethod:path withParameters:parameters];
     }
     else if([scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"]) {
         //Jump to Web
@@ -92,11 +89,6 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
 }
 
 + (id)callIn:(NSString *)class withMethod:(NSString *)method  withParameters:(NSDictionary *)parameters
-{
-    return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
-}
-
-+ (id)jumpTo:(NSString *)class withMethod:(NSString *)method withParameters:(NSDictionary *)parameters
 {
     return ((id (*)(id, SEL, NSDictionary *))(void *)objc_msgSend)([NSClassFromString(class) alloc],NSSelectorFromString(method),parameters);
 }

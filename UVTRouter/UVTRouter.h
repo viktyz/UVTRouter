@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UVTViewController.h"
+
+// URL 格式: scheme://target/action(/type?key1=value1&key2=value2&...)
+
+// router 方法:
+// 作用 - 用于调用类方法，也用于获取类实例
+// 规则 - router://classname/method(?key1=value1&key2=value2&...)
+// 说明 - key1,key2,... 等为目标 class 对应 Action 扩展的字典参数
 
 extern NSString *const UVTRouterParameterCompletion;
 
