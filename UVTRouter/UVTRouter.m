@@ -73,17 +73,14 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
         [parameters addEntriesFromDictionary:userInfo];
     }
     
-    
     id instance = nil;
     
     if ([scheme isEqualToString:@"router"]) {
-        
         instance = [self callIn:host withMethod:path withParameters:parameters];
     }
     
     if (!instance) {
-        
-        instance = [self openEmpty:@"UVTEmptyViewController" withMethod:@"initWithURL:" withFullURL:[URL stringByAppendingString:[[self sharedInstance] crateQuery:parameters]]];
+        instance = [self openEmpty:@"UVTEmptyViewController" withMethod:@"initWithURL:" withFullURL:[URL stringByAppendingString:[[self sharedInstance] crateQuery:userInfo]]];
     }
     
     return instance;

@@ -18,7 +18,7 @@
 
 - (instancetype)initWithURL:(NSString *)URL
 {
-    self = [self init];
+    self = [super init];
     if (self) {
         _URL = URL;
     }
@@ -27,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, CGRectGetWidth(self.view.frame) - 20, 100)];
     label.text = _URL;

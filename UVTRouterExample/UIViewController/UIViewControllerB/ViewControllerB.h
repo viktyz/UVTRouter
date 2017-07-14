@@ -12,4 +12,6 @@
 
 - (instancetype)initWithA:(NSString *)a B:(NSString *)b C:(NSString *)c;
 
+- (instancetype)initWithURL:(NSString *)URL;
+
 @end
