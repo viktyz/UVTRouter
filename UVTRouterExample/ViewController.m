@@ -43,6 +43,10 @@
 
 - (IBAction)clickJumpEmpyt:(UIButton *)sender {
     
+    if (![UVTRouter canOpenURL:@"router://AnyEmptyURL/initWithDic?A=testA&B=testB"]) {
+        NSLog(@"Open URL Failed");
+    }
+    
     UIViewController *aVC = [UVTRouter openURL:@"router://AnyEmptyURL/initWithDic?A=testA&B=testB"];
     [self.navigationController pushViewController:aVC animated:YES];
 }

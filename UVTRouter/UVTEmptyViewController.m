@@ -34,6 +34,8 @@
     label.text = _URL;
     label.numberOfLines = 0;
     [self.view addSubview:label];
+    
+    NSLog(@"Open Failed : %@",_URL);
 }
 
 - (void)didReceiveMemoryWarning {

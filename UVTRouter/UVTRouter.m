@@ -98,8 +98,7 @@ NSString *const UVTRouterParameterCompletion = @"UVTRouterParameterCompletion";
 
 + (BOOL)canOpenURL:(NSString *)URL
 {
-    return YES;
-    //    return [[self sharedInstance] extractParametersFromURL:URL] ? YES : NO;
+    return ([[self openURL:URL] class] == NSClassFromString(@"UVTEmptyViewController")) ? NO : YES;
 }
 
 #pragma mark - Utils

@@ -23,4 +23,6 @@ extern NSString *const UVTRouterParameterCompletion;
 + (id)openURL:(NSString *)URL completion:(void (^)(id result))completion;
 + (id)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion;
 
++ (BOOL)canOpenURL:(NSString *)URL;
+
 @end
