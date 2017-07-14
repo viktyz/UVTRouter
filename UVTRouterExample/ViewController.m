@@ -45,7 +45,7 @@
     [UVTRouter setDefaultVC:[UVTRouter openURL:@"router://ViewControllerB/initWithDic?A=testA&B=testB"]];
     
     if (![UVTRouter canOpenURL:@"router://AnyEmptyURL/initWithDic?A=testA&B=testB"]) {
-        NSLog(@"Open URL Failed, Open Default VC");
+        NSLog(@"Open URL Failed, Router to open default VC");
     }
     
     UIViewController *aVC = [UVTRouter openURL:@"router://AnyEmptyURL/initWithDic?A=testA&B=testB"];
