@@ -71,7 +71,7 @@
 		068D6FBC1F17234F005055D6 /* ViewControllerB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewControllerB.xib; path = UIViewController/UIViewControllerB/ViewControllerB.xib; sourceTree = "<group>"; };
 		068D6FBF1F174CE6005055D6 /* UVTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVTRouter.h; sourceTree = "<group>"; };
 		068D6FC01F174CE6005055D6 /* UVTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVTRouter.m; sourceTree = "<group>"; };
-		068D6FC51F17920E005055D6 /* UVTRouter.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVTRouter.pch; sourceTree = "<group>"; };
+		06D44C501F207FC5007EA21F /* UVTRouter.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVTRouter.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +159,7 @@
 		068D6F991F172210005055D6 /* UVTRouterExample */ = {
 			isa = PBXGroup;
 			children = (
+				06D44C501F207FC5007EA21F /* UVTRouter.pch */,
 				068D6FAD1F1722EC005055D6 /* UIViewController */,
 				068D6F9A1F172210005055D6 /* AppDelegate.h */,
 				068D6F9B1F172210005055D6 /* AppDelegate.m */,
@@ -176,7 +177,6 @@
 		068D6FAC1F1722CD005055D6 /* UVTRouter */ = {
 			isa = PBXGroup;
 			children = (
-				068D6FC51F17920E005055D6 /* UVTRouter.pch */,
 				068D6FBF1F174CE6005055D6 /* UVTRouter.h */,
 				068D6FC01F174CE6005055D6 /* UVTRouter.m */,
 			);
@@ -509,7 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = UVTRouter/UVTRouter.pch;
+				GCC_PREFIX_HEADER = UVTRouterExample/UVTRouter.pch;
 				INFOPLIST_FILE = UVTRouterExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.upvincent.UVTRouter;
@@ -521,7 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = UVTRouter/UVTRouter.pch;
+				GCC_PREFIX_HEADER = UVTRouterExample/UVTRouter.pch;
 				INFOPLIST_FILE = UVTRouterExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.upvincent.UVTRouter;
